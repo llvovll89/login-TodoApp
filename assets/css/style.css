@@ -6,19 +6,22 @@
 /* mobile */
 @media (max-width: 524px) {
     .login-container {
-        width: 482px;
+        width: 488px;
     }
 
     #login-form {
         gap: .75rem;
     }
 
-    .title {
-        margin: 15px auto;
+    .list .list-item {
+        width: 370px;
+        margin: 0 auto;
+        flex-wrap: wrap;
     }
 
-    .content {
-        margin: 25px auto;
+    .list .list-item .delBtn, .plusBtn {
+        margin-left: 6px;
+        border-radius: 6px;
     }
 
 }
@@ -104,7 +107,7 @@ a {
     text-align: center;
 }
 
-.title::before {
+.login-title::before {
     content: "";
     position: absolute;
     bottom: -1px;
@@ -153,18 +156,17 @@ input:focus {
 }
 
 .content {
-    margin: 50px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
+    display: block;
+    margin: 25px auto;
 }
 
 .content a {
     font-size: 12px;
+    margin: 0 6px;
 }
 
 .login-socials {
+    max-width: 95%;
     width: 100%;
     display: flex;
     gap: .5rem;
@@ -181,7 +183,6 @@ input:focus {
 
 /* todo */
 .todo-container {
-    margin-top: 20px;
     width: 492px;
     display: none;
     align-items: center;
@@ -190,8 +191,29 @@ input:focus {
     font-family: 'Gamja Flower', cursive;
 }
 
+.todo-title {
+    font-size: 32px;
+    margin: 30px auto;
+}
+
+.todo-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    /* transform: translate(0, -25%); */
+    width: 81px;
+    height: 6px;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background: #030303;
+}
+
 #todo-form {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .list {
@@ -205,14 +227,15 @@ input:focus {
 .list .list-item {
     font-size: 20px;
     display: flex;
-    gap: 1rem;
+    justify-content: space-between;
+    padding: .5rem;
+    border: 1px solid var(--lightgray);
 }
 
-.list .delBtn {
-    width: 50px;
-    font-size: 12px;
+.list .delBtn, .plusBtn {
+    width: 45px;
+    font-size: 14px;
     color: #737881;
     cursor: pointer;
     background: #ffffff;
-    border-radius: 50%;
 }

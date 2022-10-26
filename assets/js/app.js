@@ -52,11 +52,23 @@ todoForm.addEventListener("submit", (e) => {
   const todoVal = todoInput.value;
   const p = document.createElement("p");
   list.appendChild(p);
+  const btnCon = document.createElement('div');
   const delBtn = document.createElement("button");
+  const plusBtn = document.createElement('button');
   p.classList.add("list-item");
-  p.innerText = `할일(${count++}) : ${todoInput.value}`;
-  p.appendChild(delBtn);
+  if(todoVal === ""){
+    alert('할일 입력해주세영,,ㅠ');
+    p.innerText = "";
+  } else {
+    p.innerText = `할일(${count++}) : ${todoInput.value}`;
+    p.appendChild(btnCon);
+    btnCon.appendChild(plusBtn);
+    btnCon.appendChild(delBtn);
+  }
+  btnCon.classList.add('btnCon');
+  plusBtn.classList.add('plusBtn');
   delBtn.classList.add("delBtn");
+  plusBtn.innerText = "+"
   delBtn.innerText = "X";
   todoInput.value = "";
   toDos.push(todoVal);
