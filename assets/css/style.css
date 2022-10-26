@@ -3,6 +3,26 @@
 /* todo font */
 @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
 
+/* mobile */
+@media (max-width: 524px) {
+    .login-container {
+        width: 482px;
+    }
+
+    #login-form {
+        gap: .75rem;
+    }
+
+    .title {
+        margin: 15px auto;
+    }
+
+    .content {
+        margin: 25px auto;
+    }
+
+}
+
 * {
     margin: 0;
     padding: 0;
