@@ -1,0 +1,198 @@
+/* login font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+/* todo font */
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* 
+    box-shadow: 
+    */
+    /* 0 4px 2px -2px 용도 */
+    --shadow: rgba(0, 0, 0, 0.7);
+    /* 0 17px 20px -18px - 입체용도 */
+    --shadow3d: rgba(0, 0, 0, 1);
+    /* box모델 shadow */
+    --lightgray: #e5e8eb;
+    /* 밝은 blue톤 */
+    --lightsky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    --lightvan: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+
+html, body {
+    background: #ffffff;
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+#wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#wrap.active {
+    justify-content: flex-start;
+}
+
+.container {
+    max-width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    width: 492px;
+    /* height: 420px; */
+    /* border: 1px solid black; */
+}
+
+.container.active {
+    display: none;
+}
+
+#login-form {
+    max-width: 95%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* justify-content: center; */
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.title {
+    position: relative;
+    font-size: 28px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.title::before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+    height: 2px;
+    background: #17191d;
+}
+
+input, button {
+    max-width: 95%;
+    width: 100%;
+    border: 1px solid var(--lightgray);
+}
+
+input[type="text"], input[type="password"] {
+    height: 66px;
+    font-size: 16px;
+    padding: 18px 12px;
+    outline: none;
+}
+
+input:focus {
+    outline: 1px solid skyblue;
+}
+
+.btn {
+    height: 62px;
+    font-size: 20px;
+    color: #737881;
+    cursor: pointer;
+    background: #ffffff;
+}
+
+.login-btn {
+    height: 62px;
+    margin-top: 22px;
+    font-weight: 600;
+    background-color: #17191d;
+    color: #e5e8eb;
+    transition: all .2s linear;
+}
+
+.login-btn:hover {
+    transition: all .2s linear;
+    background-color: #07f;
+}
+
+.content {
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.content a {
+    font-size: 12px;
+}
+
+.login-socials {
+    width: 100%;
+    display: flex;
+    gap: .5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-socials .socialBtn {
+    height: 52px;
+    font-size: 14px;
+    font-weight: middle;
+}
+
+/* todo */
+.todo-container {
+    margin-top: 20px;
+    width: 492px;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Gamja Flower', cursive;
+}
+
+#todo-form {
+    width: 100%;
+}
+
+.list {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.list .list-item {
+    font-size: 20px;
+    display: flex;
+    gap: 1rem;
+}
+
+.list .delBtn {
+    width: 50px;
+    font-size: 12px;
+    color: #737881;
+    cursor: pointer;
+    background: #ffffff;
+    border-radius: 50%;
+}

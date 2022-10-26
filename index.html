@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>TodoMemo - Login</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <!-- 전체 Background 설정 -->
+    <div id="wrap" class="active">
+        <!-- 메인 로그인 -->
+        <div class="container login-container">
+            <div class="title">HodoApp</div>
+            <form id="login-form">
+                <input type="text" class="login-input" placeholder="Login ID(아이디)" required maxlength="15" autocomplete="off">
+                <input type="password" name="pass" class="login-password" placeholder="비밀번호" required maxlength="15">
+                <button class="btn login-btn">Todo App 로그인</button>
+                <!-- 비번찾기 -->
+            </form>
+            <div class="content">
+                <a href="#">ID찾기</a>
+                <a href="#">비밀번호 찾기</a>
+                <a href="#">고객센터</a>
+            </div>
+            <div class="login-socials">
+                <button class="btn socialBtn">Facebook Login</button>
+                <button class="btn socialBtn">Naver Login</button>
+                <button class="btn socialBtn">Gogle Login</button>
+                <button class="btn socialBtn">Github Login</button>
+            </div>
+        </div>
+        <div class="container todo-container">
+            <div class="title">Today To do Memo</div>
+            <form id="todo-form">
+                <input type="text" class="todo-input" placeholder="오늘의 할일은?!">
+                <button class="btn todo-btn">Submit</button>
+            </form>
+            <div class="list">
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
